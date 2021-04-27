@@ -4,7 +4,7 @@ import {Transaction} from "../transaction/Transaction";
 
 /**
  * Note that this property contains ALL masternodes, including banned ones.
- * Use getValidMasternodesList() method to get the list of only valid nodes.
+ * Use getValidSmartnodesList() method to get the list of only valid nodes.
  * This in needed for merkleRootNMList calculation
  * @type {SimplifiedMNListEntry[]}
  */

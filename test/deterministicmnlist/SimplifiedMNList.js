@@ -95,11 +95,11 @@ describe('SimplifiedMNList', function () {
       expect(root).to.be.equal('0000000000000000000000000000000000000000000000000000000000000000');
     });
   });
-  describe('getValidMasternodesList', function () {
+  describe('getValidSmartnodesList', function () {
     it('Should return a valid masternodes list', function () {
       var mnList = new SimplifiedMNList(SMNListFixture.getFirstDiff());
 
-      var validMNs = mnList.getValidMasternodesList();
+      var validMNs = mnList.getValidSmartnodesList();
       expect(validMNs).to.be.an('Array');
       expect(mnList.mnList.length).to.be.equal(371);
       expect(validMNs.length).to.be.equal(273);
@@ -113,7 +113,7 @@ describe('SimplifiedMNList', function () {
     it('Should return an empty array if mn list is empty', function () {
       var mnList = new SimplifiedMNList();
 
-      expect(mnList.getValidMasternodesList().length).to.be.equal(0);
+      expect(mnList.getValidSmartnodesList().length).to.be.equal(0);
     });
   });
   describe('toSmplifiedMNListDiff', function () {
@@ -134,7 +134,7 @@ describe('SimplifiedMNList', function () {
         expect(restoredMNList.blockHash).to.be.equal(SMNListFixture.getSecondDiff().blockHash);
         expect(restoredMNList.mnList).to.be.deep.equal(originalMNList.mnList);
         expect(restoredMNList.merkleRootMNList).to.be.deep.equal(originalMNList.merkleRootMNList);
-        expect(restoredMNList.getValidMasternodesList()).to.be.deep.equal(originalMNList.getValidMasternodesList());
+        expect(restoredMNList.getValidSmartnodesList()).to.be.deep.equal(originalMNList.getValidSmartnodesList());
         expect(restoredMNList.cbTx.toObject()).to.be.deep.equal(originalMNList.cbTx.toObject());
         expect(restoredMNList.cbTxMerkleTree).to.be.deep.equal(originalMNList.cbTxMerkleTree);
       }

@@ -22,7 +22,7 @@ export type ProUpRegTransactionPayloadJSON = {
  * @class ProUpRegTxPayload
  * @property {number} version uint_16    2    Upgrade Provider Transaction version number. Currently set to 1.
  * @property {string} proTxHash uint256    32    The hash of the provider transaction
- * @property {number} mode uint_16    2    Masternode mode
+ * @property {number} mode uint_16    2    Smartnode mode
  * @property {string} pubKeyOperator BLSPubKey    48    The public key hash used for operational related signing (network messages, ProTx updates)
  * @property {string} keyIDVoting CKeyID    20    The public key hash used for voting.
  * @property {number} scriptPayoutSize compactSize uint    1-9    Size of the Payee Script.
@@ -94,7 +94,7 @@ export class ProUpRegTxPayload {
      */
     proTxHash: string;
     /**
-     * uint_16    2    Masternode mode
+     * uint_16    2    Smartnode mode
      */
     mode: number;
     /**
